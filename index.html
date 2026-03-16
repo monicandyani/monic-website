@@ -457,30 +457,37 @@
       color: var(--accent);
     }
 
-    /* ── SPEAKING ── */
-    #speaking {
+    /* ── EVENTS ── */
+    #events {
       background: var(--surface);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
-    .speaking-grid {
+    .events-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1px;
-      background: var(--border);
       margin-top: 3rem;
+      align-items: start;
     }
 
-    .speaking-card {
+    .events-card {
       background: var(--surface);
       padding: 2.5rem;
       transition: background 0.3s;
+      overflow: hidden;
+      min-height: 280px;
+      border-right: 1px solid var(--border);
     }
 
-    .speaking-card:hover { background: #1c1c1c; }
+    .events-card:last-child {
+      border-right: none;
+    }
 
-    .speaking-year {
+    .events-card:hover { background: #1c1c1c; }
+
+    .events-year {
       font-size: 0.7rem;
       letter-spacing: 0.15em;
       color: var(--accent);
@@ -488,7 +495,7 @@
       margin-bottom: 1rem;
     }
 
-    .speaking-title {
+    .events-title {
       font-family: var(--serif);
       font-size: 1.25rem;
       font-weight: 300;
@@ -496,19 +503,19 @@
       margin-bottom: 0.75rem;
     }
 
-    .speaking-event {
+    .events-description {
       font-size: 0.85rem;
       color: var(--muted);
       margin-bottom: 0.5rem;
     }
 
-    .speaking-location {
+    .events-location {
       font-size: 0.75rem;
       color: var(--muted);
       opacity: 0.6;
     }
 
-    .speaking-badge {
+    .events-badge {
       display: inline-block;
       margin-top: 1rem;
       font-size: 0.65rem;
@@ -656,7 +663,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Work</a></li>
-      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#events">Events</a></li>
       <li><a href="#now">Now</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -834,35 +841,41 @@
     </div>
   </section>
 
-  <!-- SPEAKING -->
-  <section id="speaking">
-    <div class="section-label">Speaking</div>
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="section-label">Events</div>
     <h2 class="section-title">On Stage &<br><em>In the Room</em></h2>
-    <div class="speaking-grid">
+    <div class="events-grid">
 
-      <div class="speaking-card">
-        <div class="speaking-year">2025</div>
-        <h3 class="speaking-title">Turning the Tide: Steering Disengaged Teams into Unified Powerhouses</h3>
-        <p class="speaking-event">Gamescom Asia x Thailand Game Show</p>
-        <p class="speaking-location">Bangkok, Thailand · October 2025</p>
-        <span class="speaking-badge">Selected Speaker</span>
-      </div>
+      <a href="https://womenintech.se/events/witswe2026/" target="_blank" style="text-decoration:none; color:inherit;">
+        <div class="events-card">
+          <div class="events-year">2026</div>
+          <h3 class="events-title"> Women In Tech Sweden</h3>
+          <p class="events-description">Networking Event</p>
+          <p class="events-location">Stockholm, Sweden · April 22nd, 2026</p>
+          <span class="events-badge" style="background: var(--accent); color: var(--bg); border-color:  var(--accent);">⭐ Upcoming ⭐</span>
+        </div>
+      </a>
 
-      <div class="speaking-card">
-        <div class="speaking-year">2022</div>
-        <h3 class="speaking-title">Building a Sustainable Business in the Indonesian Game Industry</h3>
-        <p class="speaking-event">IGDX Roadshow</p>
-        <p class="speaking-location">Yogyakarta, Indonesia · August 2022</p>
-        <span class="speaking-badge">Speaker</span>
-      </div>
+      <a href="https://gamescom.asia/press/gamescom-asia-x-thailand-game-show-announce-slate-of-gaming-giants-joining-the-show" target="_blank" style="text-decoration:none; color:inherit;">
+        <div class="events-card">
+          <div class="events-year">2025</div>
+          <h3 class="events-title">Turning the Tide: Steering Disengaged Teams into Unified Powerhouses</h3>
+          <p class="events-description">Gamescom Asia x Thailand Game Show</p>
+          <p class="events-location">Bangkok, Thailand · October 2025</p>
+          <span class="events-badge">Selected Speaker</span>
+        </div>
+      </a>
 
-      <div class="speaking-card">
-        <div class="speaking-year">2026</div>
-        <h3 class="speaking-title">Women in Games Sweden</h3>
-        <p class="speaking-event">Industry Networking Event</p>
-        <p class="speaking-location">Stockholm, Sweden · April 2026</p>
-        <span class="speaking-badge">Upcoming</span>
-      </div>
+      <a href="https://gamescom.asia/press/gamescom-asia-x-thailand-game-show-announce-slate-of-gaming-giants-joining-the-show" target="_blank" style="text-decoration:none; color:inherit;">
+        <div class="events-card">
+          <div class="events-year">2022</div>
+          <h3 class="events-title">Building a Sustainable Business in the Indonesian Game Industry</h3>
+          <p class="events-description">IGDX Roadshow</p>
+          <p class="events-location">Yogyakarta, Indonesia · August 2022</p>
+          <span class="events-badge">Speaker</span>
+        </div>
+      </a>
 
     </div>
   </section>
